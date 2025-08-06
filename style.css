@@ -68,9 +68,9 @@ body {
   width: 100%;
   padding: 60px 0;
   overflow: hidden;
-  background-image: url(upstream/assets/lines.svg);
-  background-size: auto;
-  background-position: center;
+  background-image: url(assets/lines.svg);
+  background-size: cover;
+  /* background-position: center; */
 }
 
 .stream-wrapper {
