@@ -68,7 +68,7 @@ body {
   width: 100%;
   padding: 60px 0;
   overflow: hidden;
-  background-image: url(https://raw.githubusercontent.com/teriyake/upstream/refs/heads/main/assets/lines.svg?token=GHSAT0AAAAAADIVGYRFCT3CO3F5OZUVOT542ETQZVA);
+  background-image: url(upstream/assets/lines.svg);
   background-size: auto;
   background-position: center;
 }
