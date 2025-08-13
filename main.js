@@ -1,8 +1,8 @@
 $(document).ready(function () {
   $(".stream-container").ripples({
-    resolution: 512,
-    dropRadius: 20,
-    perturbance: 0.04,
+    resolution: 1024,
+    dropRadius: 10,
+    perturbance: 0.01,
   });
 
   const organicTransforms = [
@@ -22,6 +22,14 @@ $(document).ready(function () {
     $(this).data("original-transform", originalTransform);
   });
 
+  $(".stream a")
+    .on("mouseenter", function () {
+      $(this).addClass("is-hovered");
+    })
+    .on("mouseleave", function () {
+      $(this).removeClass("is-hovered");
+    });
+
   $(".stream-container")
     .on("mousemove", function (e) {
       const mouseX = e.pageX;
@@ -29,6 +37,12 @@ $(document).ready(function () {
 
       $(".stream a").each(function () {
         const el = $(this);
+        const originalTransform = el.data("original-transform");
+        if (el.hasClass("is-hovered")) {
+          const hoverTransform = `${originalTransform} scale(1.1)`;
+          el.css("transform", hoverTransform);
+          return;
+        }
         const elOffset = el.offset();
         const elWidth = el.width();
         const elHeight = el.height();
@@ -48,7 +62,6 @@ $(document).ready(function () {
           const pushX = (dx / distance) * (force * 30);
           const pushY = (dy / distance) * (force * 30);
 
-          const originalTransform = el.data("original-transform");
           const newTransform = `translate(${pushX}px, ${pushY}px) ${originalTransform}`;
 
           el.css("transform", newTransform);
