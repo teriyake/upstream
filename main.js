@@ -56,6 +56,7 @@ $(document).ready(function () {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         const maxDistance = 150;
+        console.log("heeeeeey");
 
         if (distance < maxDistance) {
           const force = 1 - distance / maxDistance;
