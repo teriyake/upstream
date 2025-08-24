@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upstream Magazine - Index</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header" style="display: flex; align-items: center">
+      <div style="display: inline-block; margin-right: 15px" class="logo">
+        <a
+          style="text-decoration: none; color: #555"
+          href="https://upstreaming.world"
+          >UPSTREAM</a
+        >
+      </div>
+      <nav style="display: flex; align-items: center">
+        <a style="display: inline-block; margin-right: 15px" href="index.html"
+          >Current Issue</a
+        >
+        <a style="display: inline-block; margin-right: 15px" href="#.html"
+          >Index</a
+        >
+        <a style="display: inline-block; margin-right: 15px" href="archive.html"
+          >Archive</a
+        >
+        <a
+          style="display: inline-block; margin-right: 15px"
+          href="https://upstreaming.world"
+          >About</a
+        >
+      </nav>
+    </header>
+
+    <main class="tag-pond-container">
+      <div id="tag-pond">
+        <a href="#" class="tag" draggable="false">Ecology</a>
+        <a href="#" class="tag" draggable="false">Knowledge</a>
+        <a href="#" class="tag" draggable="false">Social</a>
+        <a href="#" class="tag" draggable="false">Spirituality</a>
+        <a href="#" class="tag" draggable="false">Future</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+        <a href="#" class="tag" draggable="false">Another Tag</a>
+      </div>
+      <div class="pond-label">Click on a tag to explore</div>
+    </main>
+    <div id="tag-overlay" class="tag-overlay">
+      <div class="overlay-content">
+        <button id="close-overlay" class="close-button">&times;</button>
+        <h2 id="overlay-title"></h2>
+        <ul id="overlay-list"></ul>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    <script src="pond.js"></script>
+  </body>
+</html>
